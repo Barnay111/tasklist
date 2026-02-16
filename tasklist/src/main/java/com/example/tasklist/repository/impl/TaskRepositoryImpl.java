@@ -1,14 +1,22 @@
 package com.example.tasklist.repository.impl;
 
 import com.example.tasklist.domain.task.Task;
+import com.example.tasklist.repository.DataSourceConfig;
 import com.example.tasklist.repository.TaskRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
 @Repository
+@RequiredArgsConstructor
 public class TaskRepositoryImpl implements TaskRepository {
+
+    private final DataSourceConfig dataSourceConfig;
+
+
+
     @Override
     public Optional<Task> findById(Long id) {
         return Optional.empty();
